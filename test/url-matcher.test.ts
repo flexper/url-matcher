@@ -1,4 +1,4 @@
-import { urlMatcher } from "../src";
+import { urlMatcher } from '../src';
 
 describe('Url Matcher', () => {
   it('should match 1', () => {

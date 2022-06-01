@@ -1,11 +1,11 @@
-import extractDomain from "extract-domain";
+import extractDomain from 'extract-domain';
 
-function cleanDomain(domain: string) {
+function cleanDomain(domain: string): string {
   const cleaned = domain
-      ?.replace('https://', '')
-      ?.replace('http://', '')
-      ?.replace('www.', '')
-      ?.replace(/\/+$/, '');
+    ?.replace('https://', '')
+    ?.replace('http://', '')
+    ?.replace('www.', '')
+    ?.replace(/\/+$/, '');
   // Handle special domain with /en for example
   // We want to remove all slashes from web url (ex: www.clustree.com/en)
   if (cleaned && cleaned.indexOf('/') > 1) {
@@ -33,8 +33,8 @@ export const urlMatcher = (domainA: string, domainB: string): boolean => {
   const parseResultA = extractDomain(domainA, { tld: true });
   const parseResultB = extractDomain(domainB, { tld: true });
   return (
-      parseResultA === parseResultB ||
-      parseResultA === domainB ||
-      domainA === parseResultB
+    parseResultA === parseResultB ||
+    parseResultA === domainB ||
+    domainA === parseResultB
   );
 };
