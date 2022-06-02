@@ -31,7 +31,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "url-matcher",
+  "name": "match-domain",
   "author": "lucas137",
   "module": "dist/url-matcher.esm.js",
   "size-limit": [
