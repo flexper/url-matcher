@@ -36,7 +36,7 @@ Return: Boolean depending on the result is true or false.
 
 To execute jest tests:
 ```
-yarn test
+pnpm test
 ```
 
 ## Maintain
